@@ -2,11 +2,28 @@
 
 # IMPORTANTE: Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código;
 
+# Checando se o valor esta na sequencia de fibonacci
 def fibo(n):
+    fib1 = 0
+    fib2 = 1
+    temp = 0
+
+    while fib1 <= n:
+        if fib1 == n:
+            return True
+        fib1, fib2 = fib2, fib1 + fib2
+
+    return False
     
 
 
 
 # Pegue o valor
-e_fibo = int(input('Qual numero voce quer checar se esta na sequencia fibonacci?'))
+e_fibo = int(input('Qual numero voce quer checar se esta na sequencia fibonacci? '))
+
 fibo(e_fibo)
+
+if fibo(e_fibo):
+    print(f"{e_fibo} esta em fibonacci")
+else:
+    print(f"{e_fibo} nao esta em fibonacci")
